@@ -36,3 +36,5 @@ arrests
 USArrestsdf <- merge(dfStates, arrests, by="stateName")
 
 head(USArrestsdf)
+
+library("ggmap")
