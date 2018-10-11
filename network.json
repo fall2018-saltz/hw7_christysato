@@ -13,16 +13,6 @@
             ],
             "source": "raw_data.csv",
             "target": "clean.R"
-        },
-        {
-            "ports": [
-                {
-                    "output": "clean_data",
-                    "type": "csv"
-                }
-            ],
-            "source": "clean.R",
-            "target": "data.csv"
         }
     ],
     "nodes": [
@@ -31,11 +21,8 @@
         },
         {
             "name": "clean.R"
-        },
-        {
-            "name": "data.csv"
         }
     ],
-    "updated_at": "2018-10-11 15:02:41",
+    "updated_at": "2018-10-11 15:02:57",
     "url": "https://github.com/fall2018-saltz/hw7_christysato"
 }
