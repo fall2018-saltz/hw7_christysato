@@ -38,6 +38,7 @@ USArrestsdf <- merge(dfStates, arrests, by="stateName")
 head(USArrestsdf)
 
 library("ggplot2")
+library("ggmap")
 
 DF <- data.frame(state.name, )
 
