@@ -38,7 +38,6 @@ library("ggplot2")
 library("ggmap")
 
 #created a dataframe DF which holds state names, center of each state, and area center
-DF <- data.frame(state.name, state.center, stringsAsFactors=False)
 DF <- data.frame(state.name, state.center,state.area)
 #rename state.name to stateName so I can merge it into one dataframe
 colnames(DF)[colnames(DF) == 'state.name'] <- 'stateName'
