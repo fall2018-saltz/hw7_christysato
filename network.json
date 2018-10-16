@@ -37,10 +37,15 @@
             "task_status": "in progress"
         },
         {
+            "assigned_to": "christysato",
             "desc": "",
-            "name": "Maps.R"
+            "name": "Maps.R",
+            "task_status": "in progress"
+        },
+        {
+            "name": "mapcolor.png"
         }
     ],
-    "updated_at": "2018-10-16 21:19:41",
+    "updated_at": "2018-10-16 21:22:18",
     "url": "https://github.com/fall2018-saltz/hw7_christysato"
 }
