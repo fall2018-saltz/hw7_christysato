@@ -54,6 +54,16 @@
             ],
             "source": "Maps.R",
             "target": "mapPop.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "mapNE",
+                    "type": "png"
+                }
+            ],
+            "source": "Maps.R",
+            "target": "mapNE.png"
         }
     ],
     "nodes": [
@@ -85,6 +95,6 @@
             "name": "mapNE.png"
         }
     ],
-    "updated_at": "2018-10-16 22:57:02",
+    "updated_at": "2018-10-16 22:57:10",
     "url": "https://github.com/fall2018-saltz/hw7_christysato"
 }
