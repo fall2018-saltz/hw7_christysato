@@ -21,7 +21,6 @@ dfStates <- MyMode(dfStates)
 #provides clean dataset
 str(dfStates)
 
-#STEPA2
 #copied USArrests into local variable called arrests
 arrests <- USArrests
 arrests <- data.frame(USArrests)
@@ -29,13 +28,12 @@ arrests <- data.frame(USArrests)
 arrests$stateName <- row.names(arrests)
 arrests
 
-
-#STEPA3
 #merge the two datasets with matching stateName column
 USArrestsdf <- merge(dfStates, arrests, by="stateName")
 
 head(USArrestsdf)
 
+#STEPA2
 library("ggplot2")
 library("ggmap2")
 
