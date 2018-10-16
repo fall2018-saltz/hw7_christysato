@@ -26,3 +26,10 @@ mapMurder <- mapMurder + expand_limits(x=USArrestsDF$x, y=USArrestsDF$y)
 #names map Murder Rate/State
 mapMurder <- mapMurder + coord_map() + ggtitle ("Murder Rate/State")
 
+#STEPC5
+#want to show population as a cirlce per state
+mapPop <- ggplot(USArrestsDF, aes(map_id=USArrestsDF$stateName))
+#use a basic map diagram just white and black
+mapPop <- mapPop + geom_map(map=us, fill= USArrestsDF$Murder)
+#size of circles will vary depending on population, and the circles are placed in the center of each state
+mapPop <- mapPop + geom_point(data=USArrestsDF, aes(size= USArrestsDF$population, x=USArrestsDF$x, y=USArrestsDF$y),shape=1)
