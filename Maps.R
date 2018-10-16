@@ -26,6 +26,7 @@ mapMurder <- mapMurder + expand_limits(x=USArrestsDF$x, y=USArrestsDF$y)
 #names map Murder Rate/State
 mapMurder <- mapMurder + coord_map() + ggtitle ("Murder Rate/State")
 
+
 #STEPC5
 #want to show population as a cirlce per state
 mapPop <- ggplot(USArrestsDF, aes(map_id=USArrestsDF$stateName))
