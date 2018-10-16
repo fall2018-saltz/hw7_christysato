@@ -44,6 +44,16 @@
             ],
             "source": "Maps.R",
             "target": "mapMurder.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "mapPop",
+                    "type": "png"
+                }
+            ],
+            "source": "Maps.R",
+            "target": "mapPop.png"
         }
     ],
     "nodes": [
@@ -72,6 +82,6 @@
             "name": "mapPop.png"
         }
     ],
-    "updated_at": "2018-10-16 21:34:29",
+    "updated_at": "2018-10-16 21:34:36",
     "url": "https://github.com/fall2018-saltz/hw7_christysato"
 }
