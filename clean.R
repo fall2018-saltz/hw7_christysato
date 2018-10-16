@@ -35,7 +35,7 @@ head(USArrestsdf)
 
 #STEPA2
 library("ggplot2")
-library("ggmap2")
+library("ggmap")
 
 DF <- data.frame(state.name, state.center, stringsAsFactors=False)
 
