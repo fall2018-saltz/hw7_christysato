@@ -1,5 +1,5 @@
 
-library("ggplot")
+library("ggplot2")
 library("ggmap")
 
 #STEPB3
