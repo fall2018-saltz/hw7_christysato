@@ -44,3 +44,7 @@ DF <- data.frame(state.name, state.center,state.area)
 colnames(DF)[colnames(DF) == 'state.name'] <- 'stateName'
 DF
 
+#merge the two datasets with matching stateName column
+USArrestsDF <- merge(USArrestsdf,DF, by="stateName")
+
+
