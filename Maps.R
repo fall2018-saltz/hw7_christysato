@@ -15,3 +15,14 @@ mapcolor <- mapcolor + geom_map(map= us, fill= USArrestsDF$state.area)
 mapcolor <- mapcolor + expand_limits(x= USArrestsDF$x, y= USArrestsDF$y)
 #named the map Area of States
 mapcolor <- mapcolor + coord_map() + ggtitle ("Area of States")
+
+#STEPC4
+#created a map color coded by the murder rate of each state
+mapMurder <- ggplot(USArrestsDF, aes(map_id = USArrestsDF$stateName))
+#fills state area with color by murder rate
+mapMurder <- mapMurder + geom_map(map= us, fill= USArrestsDF$Murder)
+#makes limits with the center of each state
+mapMurder <- mapMurder + expand_limits(x=USArrestsDF$x, y=USArrestsDF$y)
+#names map Murder Rate/State
+mapMurder <- mapMurder + coord_map() + ggtitle ("Murder Rate/State")
+
