@@ -1,0 +1,100 @@
+{
+    "collaborators": [
+        "christysato"
+    ],
+    "created_at": "2018-10-11 15:02:41",
+    "edges": [
+        {
+            "ports": [
+                {
+                    "input": "rawdata",
+                    "type": "csv"
+                }
+            ],
+            "source": "scprc_est_2017_18_pop_res.csv",
+            "target": "clean.R"
+        },
+        {
+            "ports": [
+                {
+                    "input": "USArrestsDF",
+                    "output": "USArrestsDF",
+                    "type": "r_obj"
+                }
+            ],
+            "source": "clean.R",
+            "target": "Maps.R"
+        },
+        {
+            "ports": [
+                {
+                    "output": "mapcolor",
+                    "type": "png"
+                }
+            ],
+            "source": "Maps.R",
+            "target": "mapcolor.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "mapMurder",
+                    "type": "png"
+                }
+            ],
+            "source": "Maps.R",
+            "target": "mapMurder.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "mapPop",
+                    "type": "png"
+                }
+            ],
+            "source": "Maps.R",
+            "target": "mapPop.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "mapNE",
+                    "type": "png"
+                }
+            ],
+            "source": "Maps.R",
+            "target": "mapNE.png"
+        }
+    ],
+    "nodes": [
+        {
+            "name": "scprc_est_2017_18_pop_res.csv"
+        },
+        {
+            "assigned_to": "christysato",
+            "desc": "",
+            "name": "clean.R",
+            "task_status": "in progress"
+        },
+        {
+            "assigned_to": "christysato",
+            "desc": "",
+            "name": "Maps.R",
+            "task_status": "in progress"
+        },
+        {
+            "name": "mapcolor.png"
+        },
+        {
+            "name": "mapMurder.png"
+        },
+        {
+            "name": "mapPop.png"
+        },
+        {
+            "name": "mapNE.png"
+        }
+    ],
+    "updated_at": "2018-10-16 22:57:10",
+    "url": "https://github.com/fall2018-saltz/hw7_christysato"
+}
