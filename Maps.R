@@ -8,7 +8,7 @@ us <- map_data("state")
 #ggplot expects state names to be lowercase so function tolower will make everything lower case letters credit: "An Introduction to Data Science" pg 160
 USArrestsDF$stateName <- tolower(USArrestsDF$stateName)
 #named map mapcolor
-mapcolor <- ggplot(USArrestsDF, aes(map_id = USArrestsDF$stateName))
+mapcolor <- ggplot(USArrestsDF, aes(map_id = stateName))
 #fill it with state area
 mapcolor <- mapcolor + geom_map(map= us, fill= state.area, color= "black")
 #make limits the x and y coordinates (longitude and latitude)
