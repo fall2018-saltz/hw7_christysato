@@ -45,9 +45,9 @@ USArrestsDF[32, ]
 
 # latititude(x)= -75.1449 and longitude(y)= 43.1361
 #now can put that as limits in a new visual that will show only states in the north east
-
 mapNE <- ggplot(USArrestsDF, aes(map_id=USArrestsDF$stateName))
 mapNE <- mapNE + geom_map(map=us, aes(fill= USArrestsDF$Murder))
 mapNE <- mapNE + geom_point(data=USArrestsDF, aes(size= USArrestsDF$population, x=USArrestsDF$x, y=USArrestsDF$y, color="orange"))
+#zooms in to show just the north east area
 mapNE <- mapNE + scale_x_continuous(limits= c(-85.1449, -65.1449), expand = c(0, 0)) + scale_y_continuous(limits= c(33.1361, 53.1361),expand = c(0,0))   #credit: https://stackoverflow.com/questions/34158767/ggmap-extended-zoom-or-boundaries
 mapNE <- mapNE + coord_map() + ggtitle ("North East States")
