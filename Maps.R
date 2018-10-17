@@ -2,6 +2,8 @@
 library("ggplot2")
 library("ggmap")
 
+USArrestsDF$stateName
+
 #STEPB3
 #once ggmap is installed, can get the map of the USA
 us <- map_data("state")
