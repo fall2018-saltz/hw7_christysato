@@ -12,7 +12,7 @@ mapcolor <- ggplot(USArrestsDF, aes(map_id = stateName))
 #fill it with state area
 str(USArrestsDF)
 USArrestsDF[1,]
-mapcolor <- mapcolor + geom_map(map= us, fill= state.area, color= "black")
+mapcolor <- mapcolor + geom_map(map= us, aes(fill= state.area, color= "black"))
 #make limits the x and y coordinates (longitude and latitude)
 mapcolor <- mapcolor + expand_limits(x= USArrestsDF$x, y= USArrestsDF$y)
 #named the map Area of States
