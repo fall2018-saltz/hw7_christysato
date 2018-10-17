@@ -48,6 +48,6 @@ USArrestsDF[32, ]
 
 mapNE <- ggplot(USArrestsDF, aes(map_id=USArrestsDF$stateName))
 mapNE <- mapNE + geom_map(map=us, aes(fill= USArrestsDF$Murder))
-mapNE <- mapNE + geom_point(data=USArrestsDF, aes(size= USArrestsDF$population, x=USArrestsDF$x, y=USArrestsDF$y, color="orange"),shape=1)
+mapNE <- mapNE + geom_point(data=USArrestsDF, aes(size= USArrestsDF$population, x=USArrestsDF$x, y=USArrestsDF$y, color="orange"))
 mapNE <- mapNE + scale_x_continuous(limits= c(-85.1449, -65.1449), expand = c(0, 0)) + scale_y_continuous(limits= c(33.1361, 53.1361),expand = c(0,0))   #credit: https://stackoverflow.com/questions/34158767/ggmap-extended-zoom-or-boundaries
 mapNE <- mapNE + coord_map() + ggtitle ("North East States")
