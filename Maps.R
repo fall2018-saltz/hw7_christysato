@@ -20,7 +20,7 @@ mapcolor <- mapcolor + coord_map() + ggtitle ("Area of States")
 #created a map color coded by the murder rate of each state
 mapMurder <- ggplot(USArrestsDF, aes(map_id = USArrestsDF$stateName))
 #fills state area with color by murder rate
-mapMurder <- mapMurder + geom_map(map= us, fill= USArrestsDF$Murder)
+mapMurder <- mapMurder + geom_map(map= us, fill= USArrestsDF$Murder, color= "black")
 #makes limits with the center of each state
 mapMurder <- mapMurder + expand_limits(x=USArrestsDF$x, y=USArrestsDF$y)
 #names map Murder Rate/State
@@ -31,7 +31,7 @@ mapMurder <- mapMurder + coord_map() + ggtitle ("Murder Rate/State")
 #want to show population as a cirlce per state
 mapPop <- ggplot(USArrestsDF, aes(map_id=USArrestsDF$stateName))
 #use a basic map diagram just white and black
-mapPop <- mapPop + geom_map(map=us, fill= USArrestsDF$Murder)
+mapPop <- mapPop + geom_map(map=us, fill= USArrestsDF$Murder, color= "black")
 #size of circles will vary depending on population, and the circles are placed in the center of each state
 mapPop <- mapPop + geom_point(data=USArrestsDF, aes(size= USArrestsDF$population, x=USArrestsDF$x, y=USArrestsDF$y),shape=1)
 #coord_map ensures the map is not distorted and adds title to map
@@ -45,7 +45,7 @@ USArrestsDF[32, ]
 #now can put that as limits in a new visual that will show only states in the north east
 
 mapNE <- ggplot(USArrestsDF, aes(map_id=USArrestsDF$stateName))
-mapNE <- mapNE + geom_map(map=us, fill= USArrestsDF$Murder)
+mapNE <- mapNE + geom_map(map=us, fill= USArrestsDF$Murder, color= "black")
 mapNE <- mapNE + geom_point(data=USArrestsDF, aes(size= USArrestsDF$population, x=USArrestsDF$x, y=USArrestsDF$y),shape=1)
 mapNE <- mapNE + scale_x_continuous(limits= c(-85.1449, -65.1449), expand = c(0, 0)) + scale_y_continuous(limits= c(33.1361, 53.1361),expand = c(0,0))   #credit: https://stackoverflow.com/questions/34158767/ggmap-extended-zoom-or-boundaries
 mapNE <- mapNE + coord_map() + ggtitle ("North East States")
